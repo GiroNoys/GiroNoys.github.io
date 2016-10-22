@@ -1,167 +1,137 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
-<script type="text/javascript" src="js/jquery.aitsl.js"></script>
-<script type="text/javascript" src="js/jquery-ui-1.10.4.custom.min.js"></script>
-<script type="text/javascript" src="js/jquery-ui-touchpunch.js"></script>
 <meta charset="utf-8" />
 <title>Главная</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 <link rel="stylesheet" href="css/style.css" type="text/css">
-<link rel="stylesheet" href="css/style2.css" type="text/css">
 <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700&subset=cyrillic-ext,latin' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="css/aitsl.css">
 <link href="/icon.png" rel="icon"/>
 </head>
 
 <body>
+<!-- main -->
 <div class="main">
-<!--header-->
-<div class="header">
-  <a class="logo" href="#"><img src="images/logo.png"></a>
-  <div class="contactBlock">
-    <p>г. Ростов-на-Дону — +7 (4722)<span>56-93-93, 56-94-94</span></p>
+<!-- header -->
+  <header>
+    <ul>
+      <li><a class="logo" href="#"><img src="images/logo2.png"></a></li>
+      <li><a class="logo" href="#"><img src="images/logo.png"></a></li>
+      <li><a href="#goToProducts">Товары</a></li>
+      <li><a href="#goToNews">Новости</a></li>
+      <li><a href="#goToAbout">О нас</a></li>
+      <li><a href="#goToPartners">Партнеры</a></li>
+      <li><a href="#goToContacts">Контакты</a></li>
+    </ul>
+  </header>
+
+
+  <!-- preview -->
+  <div class="content_wide preview" style="background:#fc0;padding: 40px 0;">
+    <div class="container">
+      <h1>Смело заказывай!<p>Строй надежно!</p></h1>
+      <h2>Приобретите проверенные товары по оптовым ценам</h2>
+      <a href="#goToProducts">Перейти к каталогу</a>
+    </div>
+    <div class="prewiew_image"><img src="images/prewiew.png"></img></div>
   </div>
-</div>	
-<!--menu-->
-
-<!--content-->
-<p class="title">ПОПУЛЯРНЫЕ ТОВАРЫ</p>
-<ul class="menu">
-<li>Клея</li>
-<li>Шпаклевки</li>
-<li>Штукатурки</li>
-<li>Системы утепления фасадов</li>
-<li>Наливные полы</li>
-<li>Стяжки</li>
-<li>Кладочные растворы</li>
-<li>Грунтовки</li>
-</ul>
 
 
+  
 
-<div class="content">
-<!-- Популярная продукция -->
-<div class="topProducts">
-  <div id="product_1" class="products">
-
-    <div class="product_item">
-      <a href="shpaklevka-polimernaya-finish-belaya.html">
-        <img src="images/bibermix/5b1a612b00135407c412bc34c92409bb.jpg"><p>Штукатурка цементная Ш-24</p>
-      </a>
-    </div>
-
-    <div class="product_item">
-      <a href="shpaklevka-polimernaya-finish-belaya.html">
-        <img src="images/evrol/2.png"><p>Штукатурка грунтовочная цементная БАЗОВАЯ. водо- и морозостойкая</p>
-      </a>
-    </div>
-
-    <div class="product_item">
-      <a href="shpaklevka-polimernaya-finish-belaya.html">
-        <img src="images/knauf/293996_434x326.jpg"><p>Финишная шпаклевка Knauf</p>
-      </a>
-    </div>
-  </div>
+<div class="content_wide preview_text">
+  <p>Мы предоставляем большой выбор полимерцементных сухих смесей по оптовым ценам и в большом количестве, а также снабдить вас кровельными и сантехническими строительными частями</p>
 </div>
+  
+  
+<!-- О нас -->
+<p class="title" id="goToAbout">О нас</p>
+<div class="content_wide preview_text">
+  <p>Компания РостЗаказ входит в союз 9 организаций под названием "НАЗВАНИЕ". Мы являемся прямым оптовым поставщиком полимерцементных сухих смесей таких завлдов, как: Тим, ЕвроЛ... Это позволяет нам дать вам выгодные цены как на малых, так и на больших объемах. С нами сотрудничает уже более 100 крупных и строительных и торгующих организаций. Вы всегда можете обратиться к нам как по вашим основным позициям, так и по любым другим интеесующим строительным материалам. Мы готовы поставлять вам то, что вам нужно по индивидуальной договоренности.</p>
+</div>
+<!-- /О нас -->
+
+
+<!-- Популярная продукция -->
+<p class="title" id="goToProducts">НАШИ ТОВАРЫ</p>
+<p class="info">Позвони нашему менеджеру и закажи, что тебе нужно</p>
+<div class="content_wide">
+
+  <div class="topProducts">
+    <ul class="menu">
+      <li class="menu_item_product">Клея</li>
+      <li class="menu_item_product">Шпаклевки</li>
+      <li class="menu_item_product">Штукатурки</li>
+      <li class="menu_item_product">Системы утепления фасадов</li>
+      <li class="menu_item_product">Наливные полы</li>
+      <li class="menu_item_product">Стяжки</li>
+      <li class="menu_item_product">Кладочные растворы</li>
+      <li class="menu_item_product">Грунтовки</li>
+      <i id="products_escort_product">Выберите тип товара</i>
+    </ul>
+
+    <table id="products" class="products" style="opacity:0;">
+      <tbody id="products_body">
+      </tbody>
+    </table>
+
+    <ul class="menu">
+      <li firm_name="bibermix" class="menu_item_firm">Bibermix</li>
+      <li firm_name="evrol" class="menu_item_firm">Evro.l</li>
+      <li firm_name="knauf" class="menu_item_firm">Knauf</li>
+      <li firm_name="tim" class="menu_item_firm">Тим</li>
+      <li firm_name="volma" class="menu_item_firm">Волма</li>
+      <i id="products_escort_firm">Выберите производителя</i>
+    </ul>
+
+  </div>
 </div>
 <!-- /Популярная продукция -->
 
 
 
 <!-- Новости -->
+
 <p class="title">НОВОСТИ</p>
-<div class="content">
+<div class="content_wide news">
 <div class="topNews">
-  <div class="news">
 
-    <div class="new_item">
-      <a href="shpaklevka-polimernaya-finish-belaya.html" >
-        <img src="images/new.jpg"><p>Шпаклевка полимерная ФИНИШ белая LR+</p>
-      </a>
-    </div>
+  <a href="ssilka_na_novost" class="news_item">
+    <img src="images/new.jpg"><p>Шпаклевка полимерная ФИНИШ белая лимерная ФИНИШ белая LR+</p>
+  </a>
 
-    <div class="new_item">
-      <a href="shpaklevka-polimernaya-finish-belaya.html">
-        <img src="images/new.jpg"><p>Шпаклевка полимерная ФИНИШ белая LR+</p>
-      </a>
-    </div>
-    
-    <div class="new_item">
-      <a href="shpaklevka-polimernaya-finish-belaya.html">
-        <img src="images/new.jpg"><p>Шпаклевка полимерная ФИНИШ белая LR+</p>
-      </a>
-    </div>
-    
-  </div>
+  <a href="ssilka_na_novost" class="news_item">
+    <img src="images/new.jpg"><p>Шпаклевка полимерная ФИНИШ белая лимерная ФИНИШ белая LR+</p>
+  </a>
+
+  <a href="ssilka_na_novost" class="news_item">
+    <img src="images/new.jpg"><p>Шпаклевка полимерная ФИНИШ белая лимерная ФИНИШ белая LR+</p>
+  </a>
+
+  <a href="ssilka_na_novost" class="news_item">
+    <img src="images/new.jpg"><p>Шпаклевка полимерная ФИНИШ белая лимерная ФИНИШ белая LR+</p>
+  </a>
+
 </div>
 </div>
 <!-- /Новости -->
+
+
+
+
+
+
 </div>
+<!-- /main -->
 
-
-
-<div class="footer">
-  <p>г. Ростов-на-Дону — +7 (4722)<span>56-93-93, 56-94-94</span></p>
-</div>
-
-
-<script type="text/javascript">
-/*    $('.mainCont').on( "change", "#slider-1", function() {
-
-
-var FFF = $(this).parent().children( "div" ).children( "a" );
-var DDD = FFF.attr("title");
-$('#squareContent2').css('width',DDD+'%');
-
-console.log(DDD);
-
-});*/
-
-
-$("#tovarSlider").aitsl({
-visibleItems: 3,
-autoPlay: true,
-autoPlaySpeed : 999999,
-autoPlayCount: 1,
-autoPlayDirection: "right",
-createNavButtons: "none",
-createListButtons: "inside",
-autoResize: true,
-});
-
-$("#stateSlider").aitsl({
-visibleItems: 2,
-autoPlay: true,
-autoPlaySpeed : 999999,
-autoPlayCount: 1,
-autoPlayDirection: "right",
-createNavButtons: "none",
-createListButtons: "outside",
-autoResize: true,
-});
-
-$("#tovarSlider img").mousemove(function(){
-
-return false;
-});
-
-
-
-$( "#scrollSliderButton" ).slider({    
-value : 270,
-min : 60,
-max : 940,
-step : 1,
-slide : function( event, ui ) {
-var w=(ui.value)/10;
-$('#squareContent2').css('width',w+'%');
-}
-});
-
-</script>
-</div>
+<!-- футер -->
+<footer id="goToContacts">
+  <a href="https://vk.com/"><img src="http://mokuhni.ru/images/a56eb75629257969b61b02004580f142.png"></a>
+  <p>г. Ростов-на-Дону — +7 (4722) 56-93-93, 56-94-94</p>
+  <p>Copyright © ООО "Мистер" 2005-2016 Все права защищены</p>
+</footer>
+<!-- /футер -->
+<script src="js/script.js"></script>
 </body>
 </html>

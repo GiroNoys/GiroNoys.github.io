@@ -224,6 +224,7 @@ header a:hover{
   text-align: center;
   font-size: 1.4em;
   padding: 40px 10%;
+    margin: 0;
 }
 .info{
   text-align: center;
@@ -283,9 +284,9 @@ header a:hover{
 footer{
   background: #111118;
   overflow: hidden;
-  padding: 1.5% 30%;
+  padding: 1.5% 0;
   color: #666668;
-  width: 40%;
+  width: 100%;
 }
 footer img{
   width: 40px;
@@ -294,6 +295,16 @@ footer img{
 }
 footer p{
   text-align:center;
+}
+footer .title{
+  margin-bottom:1%;
+}
+footer .partners, footer .contacts{
+  text-align:center;
+}
+footer .partners img, footer .contacts img{
+  display:inline-block;
+  margin: 12px;
 }
 /* /footer */
 

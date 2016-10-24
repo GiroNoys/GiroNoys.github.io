@@ -168,6 +168,7 @@ header a:hover{
   background:rgba(0,0,0,0);
   width:100%;
   transition:.4s;
+  border-collapse:collapse;
 }
 .product_item {
   padding:1%;
@@ -175,7 +176,6 @@ header a:hover{
   max-width:30%;
   width:30%;
   vertical-align: top;
-  
 }
 .product_item:hover{
   background: rgba(0,0,0,0.03);
@@ -189,13 +189,19 @@ header a:hover{
 .product_item img {
   margin-top: 10px;
   width: 30%;
+  float:left;
 }
 .product_item  a p{
   margin-top: 5%;
   display: inline-block;
   float: right;
   text-align: left;
+  font-size: 1.2em;
   width: 62%;
+}
+.product_item a p:nth-child(3){
+  font-size: 1em;
+  margin: 0;
 }
 #products_escort_firm {
   display: block;

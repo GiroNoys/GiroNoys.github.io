@@ -46,8 +46,19 @@ var count_td = 0;
 var product_id = 0;
 
 function show_product(){
-  var table = document.getElementById('products_body');
+  //var table = document.getElementById('products');
+  //table.innerHTML = '';
+  if(document.getElementById('products_body'))
+    var table = document.getElementById('products_body');
+  else {
+    var table = document.getElementById('products');
+    tbody = document.createElement('tbody');
+    tbody.id = 'products_body';
+    table.appendChild(tbody);
+    table = document.getElementById('products_body');
+  }
   
+  // if(table.innerHTML != '') table.innerHTML = '';
   while(product_id < images.length)
   {
         // if(images[product_id][4] == firm_name)
@@ -108,6 +119,7 @@ function show_product(){
   
   //    добавление\удаление фирмы из списка показываемых продуктов
   set_firm = function(){
+    
     if(firm_name == null)// если критериев нет
       firm_name = this.getAttribute('firm_name');
     else if(firm_name.indexOf(this.getAttribute('firm_name')) >= 0){// если такой критерий уже есть, - удаляем его
@@ -128,8 +140,11 @@ function show_product(){
     document.getElementById('products_escort_firm').style.top = '-200px';
     document.getElementById('products_escort_product').style.opacity = '0';
     document.getElementById('products_escort_product').style.top = '-200px';
-    if(this.getAttribute('selected') == '')// если кнопка активна, - вызываем функцию
+    if(this.getAttribute('selected') == ''){// если кнопка активна, - вызываем функцию
       show_product();
+    
+      
+    }
   };
     
   

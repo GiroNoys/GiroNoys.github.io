@@ -312,6 +312,9 @@ footer .partners img, footer .contacts img{
   display:inline-block;
   margin: 12px;
 }
+footer .partners img{
+  width:80px;
+}
 /* /footer */
 
 
@@ -327,7 +330,6 @@ footer .partners img, footer .contacts img{
 .menu_item_product[selected],.menu_item_firm[selected]{
   background:#fc0;
   color:#111118;
-  margin-right: 0px;
 }
 
 

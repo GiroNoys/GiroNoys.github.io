@@ -43,21 +43,17 @@ var set_product;
 var firm_name = [];
 var product_type = [];
 var count_td = 0;
-var k = 0;
 var product_id = 0;
 
 function show_product(){
-  var table = document.getElementById('products');
+  var table = document.getElementById('products_body');
   
-
-  while(product_id <= images.length)
+  while(product_id < images.length)
   {
-
-        if(images[product_id][4] == firm_name)
+        // if(images[product_id][4] == firm_name)
+        if(firm_name.indexOf(images[product_id][4]) >= 0)
         {
           console.log(images[product_id][4]);
-
-          var table = document.getElementById('products_body');
           if(count_td == 0){//если это первый элемент в своем tr
             tr = document.createElement('tr');//создаем tr
             table.appendChild(tr);
@@ -70,18 +66,21 @@ function show_product(){
           }
           else if(count_td == 1)//если в tr уже есть элемент
           {
-            var last_elem = table.children[table.children.length - 1];
-            td = document.createElement('td');//создаем td и в нем товар
-            td.className = 'product_item';
-            td.innerHTML = '<a href="#"><img src="images/' + images[product_id][4] + '/' + images[product_id][0] + '"><p>' + images[product_id][1] + '</p><p>' + images[product_id][2] + '</p></a>';
-            last_elem.appendChild(td);
-            count_td = 0;
+            if(table.children[table.children.length - 1]){
+              var last_elem = table.children[table.children.length - 1];
+              td = document.createElement('td');//создаем td и в нем товар
+              td.className = 'product_item';
+              td.innerHTML = '<a href="#"><img src="images/' + images[product_id][4] + '/' + images[product_id][0] + '"><p>' + images[product_id][1] + '</p><p>' + images[product_id][2] + '</p></a>';
+              last_elem.appendChild(td);
+              count_td = 0;
+            }
           }
         }
       
       
       product_id++;
     }
+    product_id = 0;
 }
   
   //    добавление\удаление типа продуктов из списка показываемых продуктов
